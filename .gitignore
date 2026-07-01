@@ -1,0 +1,85 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+*.egg
+.venv/
+venv/
+ENV/
+env/
+
+# Pytest / Coverage
+.pytest_cache/
+htmlcov/
+.coverage
+coverage.xml
+test-report.html
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# PySpark / Hadoop
+derby.log
+metastore_db/
+spark-warehouse/
+
+# Delta Lake checkpoints (locais)
+pipeline/silver/colaboradores/_delta_log/
+pipeline/gold/**/_delta_log/
+
+# Parquet gerado localmente (não versionar dados em produção)
+pipeline/silver/colaboradores/*.parquet
+pipeline/silver/colaboradores/*/
+pipeline/gold/serie_mensal/
+pipeline/gold/risco_por_area/
+pipeline/gold/scores_attrition/
+pipeline/gold/nine_box_grid/
+
+# CSV/JSON gerados (exceto os Bronze de exemplo)
+pipeline/silver/*.csv
+pipeline/gold/*.csv
+# Manter apenas o JSON de métricas (pequeno, documentativo)
+!pipeline/gold/metricas_modelo_attrition.json
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.backup
+*.tfvars
+.terraform.lock.hcl
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Secrets (NUNCA versionar)
+.env
+*.env
+secrets.json
+credentials.json
+*_credentials.json
+
+# MLflow
+mlruns/
+mlartifacts/
+
+# Logs
+*.log
+logs/
+
+# Temporários
+tmp/
+temp/
